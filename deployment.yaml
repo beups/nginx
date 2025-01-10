@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment-1.25.0
+  name: nginx-deployment-latest
   namespace: devops-tools
   labels:
     app: nginx
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.25.0 # Image Docker de NGINX
+        image: nginx:latest # Image Docker de NGINX
         ports:
         - containerPort: 80
 ---
